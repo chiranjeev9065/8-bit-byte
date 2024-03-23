@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css//styles.css">/
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="form-main login-box">
+            <form id="login-form" action="#">
+                <h1 style="font-weight: bolder;">Login</h1>
+                <div class="social-main">
+                    <a href="#" class="social"><img src="/images/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="social"><img src="/images/telephone.png" alt="Telephone"></a>
+                </div>
+                <span>or use your account</span>
+                <input type="text" placeholder="text" name="username"  required />
+                <input type="password" placeholder="Password"  name = "password" required  />
+            
+                <button id="submit-btn"><span>Log In</span></button>
+            </form>
+        </div>
+        <div class="rightside-box">
+            <div class="rightside">
+                <div class="rightside-panel rightside-right">
+                    <h1 style="font-weight: bolder;">WHY ALWAYS US?</h1>
+                    <p>⭐ Unbeatable value</p>
+                    <p>⭐ Prime locations</p>
+                    <p>⭐ Unforgettable experiences</p>
+                    <p>⭐ Expectional service</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+   
+  const form = document.getElementById('login-form');
+
+  form.addEventListener('submit', function(event) {
+    const emailInput = form.querySelector('input[type="email"]');
+    const passwordInput = form.querySelector('input[type="password"]');
+
+    if (!emailInput.value || !passwordInput.value) {
+      alert('Please enter your email and password.');
+      event.preventDefault();
+      return;
+    }
+
+    
+    form.submit();
+
+    alert('Login Successful!');
+  });
+</script>
+    </script>
+</body>
+
+</html>
